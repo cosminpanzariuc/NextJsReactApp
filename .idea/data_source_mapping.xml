@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
+<<<<<<< Updated upstream
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/cca38a6a-ae99-41b8-bd0b-83b27194dbba/console.sql" value="cca38a6a-ae99-41b8-bd0b-83b27194dbba" />
+=======
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/65f366fb-3def-449c-9791-77708938b467/console.sql" value="65f366fb-3def-449c-9791-77708938b467" />
+>>>>>>> Stashed changes
   </component>
 </project>

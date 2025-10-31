@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 const sql = require('better-sqlite3');
 const db = sql('meals.db');
 
@@ -165,6 +169,7 @@ const dummyMeals = [
 ];
 
 db.prepare(`
+<<<<<<< Updated upstream
     CREATE TABLE IF NOT EXISTS meals
     (
         id
@@ -201,11 +206,23 @@ db.prepare(`
         TEXT
         NOT
         NULL
+=======
+   CREATE TABLE IF NOT EXISTS meals (
+       id INTEGER PRIMARY KEY AUTOINCREMENT,
+       slug TEXT NOT NULL UNIQUE,
+       title TEXT NOT NULL,
+       image TEXT NOT NULL,
+       summary TEXT NOT NULL,
+       instructions TEXT NOT NULL,
+       creator TEXT NOT NULL,
+       creator_email TEXT NOT NULL
+>>>>>>> Stashed changes
     )
 `).run();
 
 async function initData() {
     const stmt = db.prepare(`
+<<<<<<< Updated upstream
         INSERT INTO meals
         VALUES (null,
                 @slug,
@@ -216,10 +233,27 @@ async function initData() {
                 @creator,
                 @creator_email)
     `);
+=======
+      INSERT INTO meals VALUES (
+         null,
+         @slug,
+         @title,
+         @image,
+         @summary,
+         @instructions,
+         @creator,
+         @creator_email
+      )
+   `);
+>>>>>>> Stashed changes
 
     for (const meal of dummyMeals) {
         stmt.run(meal);
     }
 }
 
+<<<<<<< Updated upstream
 initData();
+=======
+initData();
+>>>>>>> Stashed changes
